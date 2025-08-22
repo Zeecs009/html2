@@ -1,0 +1,173 @@
+/* Styling umum */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: lightblue;
+  color: #333;
+  line-height: 1.6;
+  padding: 80px 20px 20px; /* atas dikasih 80px */
+  text-align: center;
+}
+
+/* Navbar */
+nav {
+  background-color: #063970;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;   /* biar nempel di atas */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;     /* biar gak ketiban konten */
+}
+
+nav .logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Menu */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+  background-color: #0a66c2;
+  transform: scale(1.05);
+}
+
+/* Tombol Hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive untuk HP */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #063970;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+  }
+
+  nav ul.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Konten umum */
+section, h1, h2, h3, p {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+/* Tombol Instagram */
+.btn {
+  display: inline-block;
+  background-color: #E4405F;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #c72d4f;
+}
+
+/* Gambar */
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 8px;
+}
+
+/* Tabel */
+table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: white;
+}
+
+table th, table td {
+  border: 2px solid #063970;
+  padding: 10px 15px;
+  text-align: center;
+}
+
+table th {
+  background-color: #0a66c2;
+  color: white;
+}
+
+/* Form */
+form {
+  margin: 20px auto;
+  max-width: 400px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+form input[type="text"],
+form input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form input[type="submit"] {
+  background-color: #063970;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0a66c2;
+}
